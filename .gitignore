@@ -10,6 +10,16 @@ __pycache__/
 # Environment variables
 .env
 
+
+# Ignore other practice files
+app.py
+app2.py
+app3.py
+app4.py
+image.py
+personas.py
+
+
 # Streamlit cache
 .streamlit/
 
