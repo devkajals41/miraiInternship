@@ -1,6 +1,5 @@
-# Virtual Environment
-venv/
-.venv/
+# Environment variables (API keys)
+.env
 
 # Python cache
 __pycache__/
@@ -32,6 +31,6 @@ personas.py
 .vscode/
 .idea/
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
