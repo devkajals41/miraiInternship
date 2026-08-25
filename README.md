@@ -1,81 +1,116 @@
-# 💻 LIFE-OS WELLBEING DASHBOARD
+# 🔥 THE EXPENSE ROASTER
 
 ```text
 ================================================================================
-  _      _  __        ___   ____  
- | |    (_)/ _|      / _ \ / ___| 
- | |    | | |_ _____| | | | \___ \ 
- | |___ | |  _|_____| |_| |  ___) |
- |_____||_|_|       \___/ |____/ 
-                                  
- DIGITAL WELLBEING ENGINE // COACH-AEGIS VER 3.5
+  _____ _            _____                                
+ |_   _| |__   ___  | ____|_  ___ __   ___ _ __  ___  ___ 
+   | | | '_ \ / _ \ |  _| \ \/ / '_ \ / _ \ '_ \/ __|/ _ \
+   | | | | | |  __/ | |___ >  <| |_) |  __/ | | \__ \  __/
+   |_| |_| |_|\___| |_____/_/\_\ .__/ \___|_| |_|___/\___|
+                                |_|                        
+  ____                  _            
+ |  _ \ ___   __ _ ___| |_ ___ _ __ 
+ | |_) / _ \ / _` / __| __/ _ \ '__|
+ |  _ < (_) | (_| \__ \ ||  __/ |   
+ |_| \_\___/ \__,_|___/\__\___|_|   
+
+ ROAST-ENGINE VER 3.5 // FINANCIAL TRUTH MACHINE
 ================================================================================
 ```
 
-> Aegis is running...
-> Reading user screen time profiles...
-> Initializing brutal-but-fair feedback algorithms...
+> Initializing Roast Engine...
+> Loading expense profiles...
+> Preparing savage-but-helpful financial feedback algorithms...
 
-`Life-OS` is a professional digital wellbeing dashboard built with **Streamlit**, **Pandas**, and the **Gemini 3.5 Flash API**. It tracks your daily screen time habits, aggregates them across categories, and feeds them into **Aegis**—a brutal-but-fair lifestyle coach that doesn't hold back. To visualize your behavior, the system renders a dynamic, AI-generated **Guilt-Trip Avatar** (via Pollinations.ai) representing your productivity level.
+`The Expense Roaster` is a professional AI-powered personal finance dashboard built with **Streamlit**, **Pandas**, and the **Gemini 3.5 Flash API**. Users upload (or use a pre-loaded) CSV of their monthly expenses, and the app brutally roasts their spending habits while providing actionable recovery plans. A dynamic **Financial Avatar** (via Pollinations.ai) visualizes the user's spending behavior.
 
 ---
 
-## 🛠️ System Architecture & Stack
+## 🛠️ System Architecture
 
 ```text
-[CSV Data Pipeline] ──> [Pandas Aggregation Engine] ──> [Streamlit SaaS UI]
-                                                             │
-[Pollinations Avatar API] <─── [Gemini AI Coach Engine] <─────┘
+[CSV Expense Data] ──> [Pandas Aggregation] ──> [Streamlit SaaS Dashboard]
+                                                        │
+[Pollinations Avatar API] <─── [Gemini Roast Engine] <───┘
 ```
 
-- **Frontend/Dashboard:** Streamlit (v1.59.1)
-- **Data Processor:** Pandas (v3.0.3)
-- **AI Brain:** google-genai SDK (v2.12.1) + Gemini 3.5 Flash
+```mermaid
+graph LR
+    A[expenses.csv] --> B[Pandas DataFrame]
+    B --> C[Data Aggregation]
+    C --> D[Streamlit UI - KPIs & Charts]
+    C --> E[Gemini 3.5 Flash API]
+    E --> F[Roast Response + Avatar Prompt]
+    F --> D
+    F --> G[Pollinations.ai Image API]
+    G --> D
+```
+
+- **Frontend/Dashboard:** Streamlit
+- **Data Processing:** Pandas
+- **AI Brain:** google-genai SDK + Gemini 3.5 Flash
 - **Image Engine:** Pollinations.ai API
-- **Configuration:** Python-dotenv
+- **Config:** Python-dotenv
 
 ---
 
 ## 📥 Setup & Installation
 
 ```bash
-# 1. Clone this repository and enter directory
+# 1. Clone this repository
 $ git clone <your-repo-link>
 $ cd miraiIntern
 
-# 2. Setup your virtual environment
+# 2. Create & activate virtual environment
 $ python -m venv venv
-$ venv\Scripts\activate      # On Windows
-$ source venv/bin/activate   # On macOS/Linux
+$ venv\Scripts\activate        # Windows
+$ source venv/bin/activate     # macOS/Linux
 
-# 3. Install required dependencies
+# 3. Install dependencies
 $ pip install -r requirements.txt
 
-# 4. Configure environment variables
-# Create a .env file with your API key:
-$ echo "GEMINI_API_KEY=your_gemini_api_key_here" > .env
+# 4. Configure your API key
+$ echo "GEMINI_API_KEY=your_key_here" > .env
 ```
-
-*Note: Your `.env` file contains sensitive API keys and is excluded from source control via `.gitignore`.*
 
 ---
 
-## 🚀 Running the System
-
-To boot up the dashboard locally:
+## 🚀 Running the App
 
 ```bash
-$ streamlit run life_os_app.py
+$ streamlit run expense_roaster.py
 ```
 
 ---
 
-## 🧠 Core Features & Phase Deliverables
+## ✨ Core Features
 
-- **Phase 1: Data Pipeline:** Synthesized 14 days of realistic app usage data across 5 distinct categories (`Coding`, `Social Media`, `Entertainment`, `Education`, `Productivity`). Loaded using pandas with robust caching.
-- **Phase 2: SaaS UI Command Center:**
-  - Sidebar for date filtering and setting screen time boundaries.
-  - KPI metric cards indicating screen time duration, most used app, and dynamic target deltas (`delta_color="inverse"`).
-  - Clean stacked bar charts detailing daily usage categories over 14 days.
-- **Phase 3: AI Integration:** Integrates Gemini to analyze daily habits, outputting a custom JSON format with lifestyle reviews and real-world replacements.
-- **Phase 4: Guilt-Trip Avatar (Innovation):** Extracts the AI's creative prompt and renders a matching avatar generated via Pollinations.ai. The avatar is seeded to the day's date, keeping it stable but highly personalized.
+- **Phase 1 — Data Pipeline:** Synthetic 25-day expense dataset across 10 categories (Food Delivery, Shopping, Subscriptions, Transport, Entertainment, etc.).
+- **Phase 2 — SaaS Dashboard UI:**
+  - Sidebar controls: Monthly budget slider + category multi-select filter.
+  - KPI cards: Total Spent, Budget Goal vs Actual (with `delta_color="inverse"`), Biggest Money Pit, Avg Daily Burn.
+  - Charts: Daily spending bar chart, Category breakdown, Payment method distribution.
+  - Expandable transaction table.
+- **Phase 3 — AI Integration:** Gemini "Roast Master" persona analyzes spending categories and delivers savage-but-helpful financial advice with specific real-world alternatives and a recovery plan.
+- **Innovation — Financial Avatar:** AI-generated image from Pollinations.ai visualizing the user's financial health status.
+
+---
+
+## 📁 Project Structure
+
+```text
+miraiIntern/
+│
+├── expense_roaster.py     # Main Streamlit application
+├── expenses.csv           # Synthetic expense dataset
+├── requirements.txt       # Python dependencies
+├── .env                   # API keys (not pushed to GitHub)
+├── .gitignore             # Excludes .env, venv, __pycache__
+└── README.md              # This file
+```
+
+---
+
+## 🔗 Live Demo
+
+[**Click here to view the live app →**](#)
