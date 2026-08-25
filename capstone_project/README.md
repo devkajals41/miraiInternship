@@ -1,22 +1,13 @@
 # 🔥 Capstone Project: Expense Roaster
 
-```text
-================================================================================
-  _____ _            _____                                
- |_   _| |__   ___  | ____|_  ___ __   ___ _ __  ___  ___ 
-   | | | '_ \ / _ \ |  _| \ \/ / '_ \ / _ \ '_ \/ __|/ _ \
-   | | | | | |  __/ | |___ >  <| |_) |  __/ | | \__ \  __/
-   |_| |_| |_|\___| |_____/_/\_\ .__/ \___|_| |_|___/\___|
-                                |_|                        
-  ____                  _            
- |  _ \ ___   __ _ ___| |_ ___ _ __ 
- | |_) / _ \ / _` / __| __/ _ \ '__|
- |  _ < (_) | (_| \__ \ ||  __/ |   
- |_| \_\___/ \__,_|___/\__\___|_|   
+![Expense Roaster Banner](banner.png)
 
- ROAST-ENGINE VER 3.5 // FINANCIAL TRUTH MACHINE
-================================================================================
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gemini_3.5_Flash-8E75C2?style=for-the-badge&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" />
+</p>
 
 This folder houses the **Expense Roaster** Streamlit application, a production-grade AI personal finance dashboard.
 

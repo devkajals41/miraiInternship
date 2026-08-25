@@ -1,16 +1,13 @@
 # MirAI School of Technology — Summer Internship 2026 Portfolio
 
-```text
-================================================================================
-  __  __ _ _   _ ___                                 _ _
- |  \/  (_)_ _/ |  _ \  _ \_   ___|  _ \  _ \_  (_) |_
- | |\/| | | '__| | |_) |/ _` | |/ __/ _ \ |_) / _` / __/ __| | __|
- | |  | | | |  | |  _ <| (_| | | | (_|  __/  __/ (_| \__ \__ \ | |_
- |_|  |_|_|_|  |_|_| \_\\__,_|_|_|\___\___|_|   \__,_|___/___/_|\__|
- 
-             SUMMER INTERNSHIP PORTFOLIO 
-================================================================================
-```
+![Expense Roaster Banner](banner.png)
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gemini_3.5_Flash-8E75C2?style=for-the-badge&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" />
+</p>
 
 This repository contains the weekly assignments and the final Capstone project completed during the **MirAI School of Technology Virtual Summer Internship (AI Builder Track)**.
 
