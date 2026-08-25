@@ -1,87 +1,93 @@
-# 🔥 Expense Roaster
+# 🔥 Capstone Project: Expense Roaster
 
-> AI-powered personal finance dashboard that brutally roasts your spending habits.
+```text
+================================================================================
+  _____ _            _____                                
+ |_   _| |__   ___  | ____|_  ___ __   ___ _ __  ___  ___ 
+   | | | '_ \ / _ \ |  _| \ \/ / '_ \ / _ \ '_ \/ __|/ _ \
+   | | | | | |  __/ | |___ >  <| |_) |  __/ | | \__ \  __/
+   |_| |_| |_|\___| |_____/_/\_\ .__/ \___|_| |_|___/\___|
+                                |_|                        
+  ____                  _            
+ |  _ \ ___   __ _ ___| |_ ___ _ __ 
+ | |_) / _ \ / _` / __| __/ _ \ '__|
+ |  _ < (_) | (_| \__ \ ||  __/ |   
+ |_| \_\___/ \__,_|___/\__\___|_|   
 
----
+ ROAST-ENGINE VER 3.5 // FINANCIAL TRUTH MACHINE
+================================================================================
+```
 
-## About
+This folder houses the **Expense Roaster** Streamlit application, a production-grade AI personal finance dashboard.
 
-**Expense Roaster** is a production-quality Streamlit web application that lets users upload or manually enter their monthly expenses. The app processes the data with Pandas, generates interactive Plotly visualizations, and feeds the aggregated summary to **Google Gemini 3.5 Flash** — which acts as "The Roast Master," a savage but genuinely helpful personal finance coach.
-
-A dynamic **Financial Avatar** (powered by Pollinations.ai) is generated based on the user's spending behavior — guilt-tripping overspenders and celebrating disciplined budgeters.
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | Streamlit |
-| Data Processing | Pandas |
-| AI Engine | Google Gemini 3.5 Flash (via `google-genai` SDK) |
-| Visualizations | Plotly Express |
-| Image Generation | Pollinations.ai API |
-| Config | python-dotenv / Streamlit Secrets |
-
----
-
-## Features
-
-- **Interactive Data Ingestion** — Upload a CSV or manually enter expenses through a clean form interface
-- **KPI Metric Cards** — Total spending, budget variance, biggest money pit, daily burn rate
-- **Plotly Charts** — Category donut chart, daily spend bars, payment method distribution
-- **AI Roast Engine** — Gemini analyzes spending patterns and delivers a brutally honest financial assessment with a letter grade and actionable recovery steps
-- **Financial Avatar** — AI-generated image representing the user's financial state
-- **Session State** — No data loss on widget interactions
-- **st.form** — API calls only trigger on explicit user action
+🔗 **[Live Deployed URL](https://miraiinternship-8vbgfann2wttqxgpymeiwm.streamlit.app)**
 
 ---
 
-## Setup
+## 🏗️ Technical Pipeline & Design
 
-```bash
-# Clone
-git clone https://github.com/devkajals41/miraiInternship.git
-cd miraiInternship
+The application links data ingestion, local pandas metrics aggregation, interactive Plotly charts, and structured LLM responses.
 
-# Install dependencies
-pip install -r requirements.txt
+```mermaid
+graph LR
+    subgraph Input
+        A1[CSV Upload] --> C[Pandas Engine]
+        A2[Manual Form] --> C
+    end
 
-# Add your API key
-echo "GEMINI_API_KEY=your_key_here" > .env
+    subgraph Views
+        C --> D1[KPI Cards]
+        C --> D2[Plotly Charts]
+        C --> D3[Interactive Data Editor]
+    end
 
-# Run
-streamlit run expense_roaster.py
+    subgraph AI Pipeline
+        C --> E[Data Summary Builder]
+        E --> F[Gemini 3.5 Flash]
+        F --> G[JSON Parsed Roast]
+        G --> H[Pollinations.ai Image API]
+        H --> I[Financial Avatar Graphic]
+    end
+
+    classDef accent fill:#EC4899,stroke:#BE185D,stroke-width:2px,color:#fff;
+    classDef card fill:#fff,stroke:#E0E7FF,stroke-width:2px,color:#0F172A;
+    
+    class C accent;
+    class D1,D2,D3,G,I card;
 ```
 
 ---
 
-## Architecture
+## 📂 Folder Files
 
-```
-┌──────────────────┐     ┌─────────────────┐     ┌──────────────────┐
-│  User Input      │────▶│  Pandas Engine   │────▶│  Streamlit UI    │
-│  (CSV / Manual)  │     │  (Aggregation)   │     │  (KPIs + Charts) │
-└──────────────────┘     └────────┬────────┘     └──────────────────┘
-                                  │
-                         ┌────────▼────────┐
-                         │  Gemini 3.5     │
-                         │  Flash API      │
-                         │  (Roast Master) │
-                         └────────┬────────┘
-                                  │
-                         ┌────────▼────────┐
-                         │  Pollinations   │
-                         │  Image API      │
-                         └─────────────────┘
-```
+- **`expense_roaster.py`**: The core Streamlit application. Contains all page configs, custom CSS, data loaders, state variables, and logic connectors.
+- **`expenses.csv`**: A 25-day synthetic financial mock log containing various categories.
+- **`requirements.txt`**: Unpinned library configuration containing core dependencies for Streamlit Cloud.
+- **`.gitignore`**: Directory-specific gitrules preventing API keys and cache folder configurations from leaking.
 
 ---
 
-## Live Demo
+## 🛠️ Run Locally
 
-🔗 [**View Live App**](https://devkajals41-miraiinternship-expense-roaster.streamlit.app)
+1. Open your terminal and navigate to this folder:
+   ```bash
+   cd capstone_project
+   ```
+
+2. Make sure your virtual environment is active:
+   ```bash
+   # Windows
+   ..\venv\Scripts\activate
+
+   # macOS/Linux
+   source ../venv/bin/activate
+   ```
+
+3. Launch the dashboard:
+   ```bash
+   streamlit run expense_roaster.py
+   ```
 
 ---
 
-**Built as a Capstone Project for MirAI School of Technology — Summer Internship 2026**
+**Built as the Capstone assignment for MirAI School of Technology summer session.**
