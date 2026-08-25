@@ -34,3 +34,8 @@ personas.py
 # OS
 .DS_Store
 Thumbs.db
+
+# Virtual Environment
+venv/
+.venv/
+
